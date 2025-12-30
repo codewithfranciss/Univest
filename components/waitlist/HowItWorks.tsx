@@ -2,7 +2,7 @@ import { ArrowRightLeft, ShieldCheck, Zap, Wallet, GraduationCap, LineChart, Bui
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-18 relative overflow-hidden bg-background">
+    <section id="how-it-works" className="py-14 relative overflow-hidden bg-background">
       {/* Background Decor */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent -z-10" />
       

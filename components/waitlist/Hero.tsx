@@ -38,8 +38,6 @@ const Hero = () => {
             </a>
           </Button>
         </div>
-
-        {/* Social proof */}
       </div>
     </section>
   );
