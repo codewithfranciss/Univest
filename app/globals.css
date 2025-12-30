@@ -7,34 +7,36 @@
 @theme {
   --color-background: hsl(218 88% 12%);
   --color-foreground: hsl(180 3% 95%);
-  --card: hsl(217 79% 18%);
-  --card-foreground: hsl(180 3% 95%);
-    --popover: hsl(217 79% 18%);
-    --popover-foreground: hsl(180 3% 95%);
+  --color-card: hsl(217 79% 18%);
+  --color-card-foreground: hsl(180 3% 95%);
+    --color-popover: hsl(217 79% 18%);
+    --color-popover-foreground: hsl(180 3% 95%);
 
-    --primary: hsl(153 96% 59%);
-    --primary-foreground: hsl(218 88% 12%);
+    --color-primary: hsl(153 96% 59%);
+    --color-primary-foreground: hsl(218 88% 12%);
 
-    --secondary: hsl(215 43% 31%);
-    --secondary-foreground: hsl(180 3% 95%);   
-    --muted: hsl(215 43% 31%);
-    --muted-foreground: hsl(218 23% 71%);
+    --color-secondary: hsl(215 43% 31%);
+    --color-secondary-foreground: hsl(180 3% 95%);   
+    --color-muted: hsl(215 43% 31%);
+    --color-muted-foreground: hsl(218 23% 71%);
 
-    --accent: hsl(153 96% 59%);
-    --accent-foreground: hsl(218 88% 12%);
+    --color-accent: hsl(153 96% 59%);
+    --color-accent-foreground: hsl(218 88% 12%);
 
-    --destructive: hsl(0 84% 60%);
-    --destructive-foreground: hsl(180 3% 95%);
+    --color-destructive: hsl(0 84% 60%);
+    --color-destructive-foreground: hsl(180 3% 95%);
+    --color-border: hsl(215 43% 25%);
+    --color-input: hsl(215 43% 25%);
+    --color-ring: hsl(153 96% 59%);
 
-    --border: hsl(215 43% 25%);
-    --input: hsl(215 43% 25%);
-    --ring: hsl(153 96% 59%);
-
-    --radius: hsl(0.75rem);
+    --color-radius: hsl(0.75rem);
 
     /* Custom Univest tokens */
-    --glow-primary: hsl(153 96% 59%);
-    --surface-elevated: hsl(217 70% 22%);
-    --text-primary: hsl(180 3% 95%);
-    --text-secondary: hsl(218 23% 71%);
+    --color-glow-primary: hsl(153 96% 59%);
+    --color-surface-elevated: hsl(217 70% 22%);
+    --color-text-primary: hsl(180 3% 95%);
+    --color-text-secondary: hsl(218 23% 71%);
+}
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-300;
 }
