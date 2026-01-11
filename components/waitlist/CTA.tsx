@@ -15,7 +15,7 @@ export default function CTA() {
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-y-4 sm:flex-row">
           <button className="flex h-12 w-full items-center justify-center rounded-lg bg-emerald-400 px-8 text-base font-bold text-black transition hover:bg-emerald-300 active:scale-95 sm:w-auto">
-            Start Free 7 Days Trial
+            Join the Waitlist
           </button>
         </div>
       </div>
