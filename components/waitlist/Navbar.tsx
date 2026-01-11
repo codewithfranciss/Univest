@@ -34,7 +34,7 @@ export default function Navbar() {
         {/* Actions */}
         <div className="flex items-center gap-4 sm:gap-6">
           <Link 
-            href="#" 
+            href="/waitlist" 
             className="hidden sm:flex h-10 items-center justify-center rounded-lg bg-white px-6 text-sm font-bold text-black transition-all hover:brightness-110 active:scale-95"
           >
             Join the Waitlist
@@ -72,7 +72,7 @@ export default function Navbar() {
             ))}
             <div className="mt-4 border-t border-emerald-500/20 pt-4">
               <Link 
-                href="#" 
+                href="/waitlist" 
                 className="flex h-10 items-center justify-center rounded-lg bg-white px-6 text-sm font-bold text-black hover:bg-gray-200 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
