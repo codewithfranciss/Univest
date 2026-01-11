@@ -15,7 +15,6 @@ export default function Hero() {
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <button className="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-emerald-400 px-8 text-base font-bold text-black transition hover:bg-emerald-300 active:scale-95 sm:w-auto">
-            {/* 2. Replace the span with the Lucide component */}
             <Rocket className="h-5 w-5" /> 
             <span>Pitch Your Idea</span>
           </button>
