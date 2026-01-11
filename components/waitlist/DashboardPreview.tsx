@@ -3,7 +3,6 @@ export default function DashboardPreview() {
     <div className="mt-16 flow-root sm:mt-24">
       <div className="-m-2 rounded-xl bg-white/5 p-2 lg:-m-4 lg:rounded-2xl lg:p-4">
         <div className="relative overflow-hidden rounded-lg bg-black border border-emerald-500/20 aspect-[16/9] md:aspect-[2/1] lg:aspect-[21/9]">
-          
           {/* Faux UI Header */}
           <div className="absolute top-0 z-10 flex h-10 w-full items-center gap-2 border-b border-emerald-500/20 bg-black px-4">
             <div className="flex gap-1.5">

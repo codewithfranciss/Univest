@@ -4,6 +4,8 @@ import DashboardPreview from "@/components/waitlist/DashboardPreview";
 import SocialProof from "@/components/waitlist/SocialProof";
 import Features from "@/components/waitlist/Features";
 import FAQ from "@/components/waitlist/FAQ";
+import CTA from "@/components/waitlist/CTA";
+import Footer from "@/components/waitlist/Footer";
 export default function Home() {
   return (
     <div className="relative flex h-auto min-h-screen w-full flex-col bg-black">
@@ -23,6 +25,8 @@ export default function Home() {
 
           <Features />
           <FAQ />
+          <CTA />
+          <Footer />
         </div>
       </main>
     </div>
