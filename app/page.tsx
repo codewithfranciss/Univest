@@ -3,6 +3,7 @@ import Hero from "@/components/waitlist/Hero";
 import DashboardPreview from "@/components/waitlist/DashboardPreview";
 import SocialProof from "@/components/waitlist/SocialProof";
 import Features from "@/components/waitlist/Features";
+import FAQ from "@/components/waitlist/FAQ";
 export default function Home() {
   return (
     <div className="relative flex h-auto min-h-screen w-full flex-col bg-black">
@@ -21,6 +22,7 @@ export default function Home() {
           </div>
 
           <Features />
+          <FAQ />
         </div>
       </main>
     </div>
