@@ -1,7 +1,8 @@
 import Navbar from "@/components/waitlist/Navbar";
 import Hero from "@/components/waitlist/Hero";
 import DashboardPreview from "@/components/waitlist/DashboardPreview";
-
+import SocialProof from "@/components/waitlist/SocialProof";
+import Features from "@/components/waitlist/Features";
 export default function Home() {
   return (
     <div className="relative flex h-auto min-h-screen w-full flex-col bg-black">
@@ -16,7 +17,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <Hero />
             <DashboardPreview />
+            <SocialProof />
           </div>
+
+          <Features />
         </div>
       </main>
     </div>
