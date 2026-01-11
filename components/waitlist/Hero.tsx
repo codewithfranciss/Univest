@@ -1,4 +1,4 @@
-import { Rocket } from "lucide-react"; // 1. Import the icon
+import { Rocket } from "lucide-react";
 
 export default function Hero() {
   return (
