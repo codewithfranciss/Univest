@@ -1,18 +1,30 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import { Rocket, ArrowLeft, Mail, CheckCircle2 } from "lucide-react";
+// Added Loader2 to your imports
+import { CheckCircle2, Loader2 } from "lucide-react"; 
+import { joinWaitlist } from "@/app/api/action";
 
 export default function WaitlistPage() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      
+    if (!email) return;
+
+    setLoading(true);
+    setError("");
+
+    const result = await joinWaitlist(email);
+
+    if (result.success) {
       setSubmitted(true);
+    } else {
+      setError(result.message || "An error occurred");
+      setLoading(false);
     }
   };
 
@@ -41,18 +53,27 @@ export default function WaitlistPage() {
                 <input
                     type="email"
                     required
+                    disabled={loading}
                     placeholder="Enter your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full h-14 bg-black border border-white/10 rounded-full pl-12 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500/50 transition-all placeholder:text-gray-600"
                   />
                 </div>
+                
+                {error && <p className="text-red-500 text-xs px-4 text-center">{error}</p>}
 
                 <button
                   type="submit"
-                  className="w-full h-14 bg-white text-black font-extrabold rounded-full flex items-center justify-center gap-2 hover:bg-emerald-400 transition-all active:scale-[0.98]"
+                  disabled={loading}
+                  className="w-full h-14 bg-white text-black font-extrabold rounded-full flex items-center justify-center gap-2 hover:bg-emerald-400 transition-all active:scale-[0.98] disabled:opacity-80"
                 >
-                  <span>Join</span>
+                  {/* Replaced text with Loader2 spinner during loading */}
+                  {loading ? (
+                    <Loader2 className="animate-spin h-5 w-5" />
+                  ) : (
+                    <span>Join</span>
+                  )}
                 </button>
               </form>
 
@@ -70,7 +91,11 @@ export default function WaitlistPage() {
                 We've sent a confirmation to <span className="text-white font-medium">{email}</span>. Keep an eye on your inbox.
               </p>
               <button
-                onClick={() => setSubmitted(false)}
+                onClick={() => {
+                  setSubmitted(false);
+                  setEmail("");
+                  setLoading(false);
+                }}
                 className="text-emerald-400 text-sm font-bold hover:underline"
               >
                 Use another email
@@ -79,7 +104,6 @@ export default function WaitlistPage() {
           )}
         </div>
       </div>
-    
     </div>
   );
 }
