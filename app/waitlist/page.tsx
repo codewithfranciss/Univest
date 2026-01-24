@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-// Added Loader2 to your imports
 import { CheckCircle2, Loader2 } from "lucide-react"; 
 import { joinWaitlist } from "@/app/api/action";
 
@@ -39,7 +38,7 @@ export default function WaitlistPage() {
         </div>
 
         {/* Form Card */}
-        <div className="relative p-8 rounded-3xl  bg-white/2 backdrop-blur-xl">
+        <div className="relative p-8 rounded-3xl">
           {!submitted ? (
             <>
               <div className="mb-8">
